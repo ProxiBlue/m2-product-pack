@@ -43,7 +43,7 @@ $helper = $this->helper(PriceHelper::class);
                 let checkedOption = document.getElementById('pack-option-' + this.packOptionSelected),
                     dataSet = checkedOption.dataset;
                 for (let key in dataSet) {
-                    if (dataSet.hasOwnProperty(key) && this.hasOwnProperty(key)) {
+                    if (key in this) {
                         this.packOptions[key] = dataSet[key];
                         this[key] = dataSet[key];
                     }
